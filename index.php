@@ -1,11 +1,11 @@
 <?php
-//Création d'objet via CONVERSION
+//Création d'objet via INSTANCIATION
 // Conversion d'un tableau en objet 
 
-$tab["couleur"] = "bleu";
-$tab["type"] = "plume";
-$tab["prix"] = 5;
 
-$stylo = (object) $tab;
+$ballonFoot= new stdClass();
+$ballonFoot->type = "Football";
 
-var_dump($stylo);
+
+var_dump($ballonFoot);
+
