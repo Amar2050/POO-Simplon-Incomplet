@@ -1,12 +1,35 @@
 <?php
-//Création d'objet via INSTANCIATION
-// Conversion d'un tableau en objet 
+//Création d'un class
 
 
-$ballonFoot= new stdClass();
-$ballonFoot->type = "Football";
+class Ballon {
+
+    public $marque;
+    public $sport;
+
+    function lancer(){
+        echo "Vous avez lancé le ballon !";
+    }
+}
+
+
+//On instancie 2 types de ballons
+
+//-----------Ballon de foot-------------
+$ballonFoot = new Ballon(); // Instanciation
 $ballonFoot->marque = "Nike";
-$ballonFoot->taille = 5;
-$ballonFoot->status = "crevé";
+$ballonFoot->sport = "FootBall";
+//-----------Ballon de foot-------------
+$ballonRugby = new Ballon();
+$ballonRugby->marque = "Gilbert TM";
+$ballonRugby->sport = "Rugby";
 
-var_dump(get_declared_classes());
+// Actions sur les objets
+
+echo "Sport: $ballonFoot->sport <br> Marque: $ballonFoot->marque";
+echo "<br>";
+$ballonFoot->lancer();
+
+echo "<br><br><hr>";
+
+echo "Sport: $ballonRugby->sport <br> Marque: $ballonRugby->marque";
