@@ -9,7 +9,7 @@ $ballonFoot->marque = "Nike";
 $ballonFoot->taille = 5;
 $ballonFoot->status = "crevé";
 
-// var_dump($ballonFoot);
-
-echo "- Hey le ballon de $ballonFoot->type, $ballonFoot->marque est $ballonFoot->status, Ismaël ! <br><br>
-    - C'était un taille $ballonFoot->taille, Isaac c'est ça ? ";
+if(!property_exists($ballonFoot, "prix")){
+    $ballonFoot->prix = 5;
+    echo "Le ballon coute $ballonFoot->prix €";
+}
