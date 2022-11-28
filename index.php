@@ -7,7 +7,7 @@ class Ballon {
     public $marque;
     public $sport;
 
-    function lancer($distance){
+    function lancer($distance=null){
         echo "Vous avez lancé le ballon à $distance métres";
     }
 }
@@ -33,3 +33,4 @@ $ballonFoot->lancer(42);
 echo "<br><br><hr>";
 
 echo "Sport: $ballonRugby->sport <br> Marque: $ballonRugby->marque";
+$ballonRugby->lancer();
